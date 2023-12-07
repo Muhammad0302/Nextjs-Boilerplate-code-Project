@@ -20,10 +20,6 @@ const Navbar = () => {
     display: 'flex',
     gap: 5,
   })
-  const MenuItems = [
-    { name: 'HOME', path: '/' },
-    { name: 'CONTACT US', path: '/contact' },
-  ]
 
   return (
     <AppBar
@@ -37,7 +33,7 @@ const Navbar = () => {
       <StyledToolbar>
         <SocialBox>
           <Grid sx={{ marginTop: '5px' }}>
-            <Typography
+            {/* <Typography
               sx={{
                 fontWeight: '950',
                 fontStyle: 'italic',
@@ -45,8 +41,9 @@ const Navbar = () => {
                 fontSize: '12px',
               }}
             >
-              Brand Logo
-            </Typography>
+              Lottery
+            </Typography> */}
+            <img alt='AddToCartBtn' className='w-[120px] h-[60px]' src='./Images/lottery.png' />
           </Grid>
         </SocialBox>
         <Box
@@ -54,42 +51,9 @@ const Navbar = () => {
             display: { xs: 'none', sm: 'none', md: 'flex', marginTop: '5px' },
             gap: { md: '16px', lg: '36px' },
           }}
-        >
-          {MenuItems.map((item, index) => (
-            <Typography
-              key={index}
-              sx={{
-                cursor: 'pointer',
-                fontSize: '14px',
-                fontWeight: '400',
-                textTransform: 'uppercase',
-                fontFamily: 'Rubik',
-                lineHeight: '18px',
-              }}
-            >
-              <Link
-                style={
-                  router === `${item.path}`
-                    ? {
-                        color: 'white',
-                        fontWeight: '700',
-                        textDecoration: 'none',
-                        borderRadius: '25px',
-                        padding: '10px',
-                        width: '2px',
-                        border: '2px solid #FF6744',
-                      }
-                    : { color: 'white', textDecoration: 'none' }
-                }
-                href={item.path}
-              >
-                {item.name}
-              </Link>
-            </Typography>
-          ))}
-        </Box>
+        ></Box>
 
-        <SearchBox>
+        {/* <SearchBox>
           <Grid>
             <Box sx={{ marginTop: '15px', marginRight: '12px' }}>
               <Typography
@@ -171,7 +135,18 @@ const Navbar = () => {
             }}
             onClick={() => SetOpen(!open)}
           />
-        </SearchBox>
+        </SearchBox> */}
+
+        <Typography
+          sx={{
+            fontWeight: '950',
+            textTransform: 'uppercase',
+            fontSize: '12px',
+            cursor: 'pointer',
+          }}
+        >
+          Login
+        </Typography>
       </StyledToolbar>
       <Menu
         id='demo-positioned-menu'
@@ -186,45 +161,7 @@ const Navbar = () => {
           vertical: 'top',
           horizontal: 'left',
         }}
-      >
-        <Box sx={{ width: 350, height: '90vh' }}>
-          {MenuItems.map((item, i) => (
-            <MenuItem
-              key={i}
-              sx={{
-                cursor: 'pointer',
-                fontSize: '14px',
-                fontWeight: '500',
-                textTransform: 'uppercase',
-                fontFamily: 'Rubik',
-                lineHeight: '18px',
-                fontStyle: 'normal',
-                textAlign: 'center',
-              }}
-            >
-              <Link
-                style={
-                  router === `${item.path}`
-                    ? {
-                        color: 'white',
-                        textAlign: 'center',
-                        textDecoration: 'none',
-                        borderRadius: '25px',
-                        padding: '7px',
-                        paddingLeft: '20px',
-                        paddingRight: '20px',
-                        border: '2px solid #FF6744',
-                      }
-                    : { color: 'white', textDecoration: 'none' }
-                }
-                href={item.path}
-              >
-                {item.name}
-              </Link>
-            </MenuItem>
-          ))}
-        </Box>
-      </Menu>
+      ></Menu>
     </AppBar>
   )
 }
