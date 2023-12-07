@@ -3,7 +3,7 @@ import './globals.css'
 
 import { PropsWithChildren } from 'react'
 import { lightTheme } from './theme/themes'
-import ContextProvider from './context-provider';
+import ContextProvider from './context-provider'
 
 import { ThemeProvider, CssBaseline } from '@mui/material'
 import Header from '@/components/Header'
@@ -13,15 +13,7 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
   const router = usePathname()
 
   const showHeader =
-    router === '/signin' ||
-    router === '/signup' ||
-    router === '/email' ||
-    router === '/password' ||
-    router === '/editprofile' ||
-    router === '/profile' ||
-    router === '/addmember' ||
-    router === '/allmember' ||
-    router === '/pricingplan'
+    router === '/signin' || router === '/signup' || router === '/email' || router === '/password'
       ? false
       : true
   return (
@@ -33,12 +25,12 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
       </head>
       <ThemeProvider theme={lightTheme}>
         <ContextProvider>
-        <body>
-          <CssBaseline />
-          {showHeader && <Header />}
-          {/* {<Header/>} */}
-          {children}
-        </body>
+          <body>
+            <CssBaseline />
+            {showHeader && <Header />}
+            {/* {<Header/>} */}
+            {children}
+          </body>
         </ContextProvider>
       </ThemeProvider>
     </html>
