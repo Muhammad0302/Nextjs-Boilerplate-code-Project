@@ -11,8 +11,9 @@ export default function Password() {
             <div>
               <img
                 className='lg:h-[750px] lg:w-[370px] xl:h-[940px] lg:w-[400px] xl:w-[480px] xll:w-[730px]'
-                src='/Car.png'
-                alt='Car'
+                style={{ objectFit: 'cover' }}
+                src='Images/lottery_sign.jpeg'
+                alt='lottry-img'
               ></img>
             </div>
           </div>

@@ -11,7 +11,8 @@ export default function Email() {
             <div>
               <img
                 className='lg:h-[750px] lg:w-[370px] xl:h-[940px] xl:w-[580px] xll:w-[730px]'
-                src='/Car.png'
+                style={{ objectFit: 'cover' }}
+                src='Images/lottery_sign.jpeg'
                 alt='Car'
               ></img>
             </div>

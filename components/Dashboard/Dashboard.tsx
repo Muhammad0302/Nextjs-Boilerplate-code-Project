@@ -261,8 +261,9 @@ const Dashboard = () => {
         >
           <img
             className='w-[50%] sm:w-[85%] md:w-[90%] lg:w-[90%] xl:w-[90%]'
-            src='./carr.svg'
-            alt='car'
+            style={{ objectFit: 'cover' }}
+            src='Images/lottery_sign.jpeg'
+            alt='lottry-img'
           ></img>
         </Grid>
 
