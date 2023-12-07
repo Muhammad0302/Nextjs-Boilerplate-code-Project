@@ -23,9 +23,6 @@ const Navbar = () => {
   const MenuItems = [
     { name: 'HOME', path: '/' },
     { name: 'CONTACT US', path: '/contact' },
-    { name: 'ABOUT US', path: '#' },
-    { name: 'Nav 2', path: '#' },
-    { name: 'Example Nav 3', path: '#' },
   ]
 
   return (
@@ -40,7 +37,6 @@ const Navbar = () => {
       <StyledToolbar>
         <SocialBox>
           <Grid sx={{ marginTop: '5px' }}>
-            
             <Typography
               sx={{
                 fontWeight: '950',
