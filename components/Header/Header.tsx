@@ -21,7 +21,7 @@ const Navbar = () => {
     display: 'flex',
     gap: 5,
   })
-  const hanldeLogin = () => {
+  const handleLogin = () => {
     router.push('/signin')
   }
 
@@ -48,7 +48,7 @@ const Navbar = () => {
             fontSize: '12px',
             cursor: 'pointer',
           }}
-          onClick={hanldeLogin}
+          onClick={handleLogin}
         >
           Login
         </Typography>

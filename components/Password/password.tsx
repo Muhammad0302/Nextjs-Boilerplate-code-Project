@@ -12,6 +12,7 @@ import { useState } from 'react'
 import { Formik, Form, FormikProps } from 'formik'
 import * as Yup from 'yup'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 interface ISignInForm {
   password: string
@@ -45,6 +46,7 @@ export default function Password() {
     message: '',
     type: '',
   })
+  const router = useRouter()
   // const classes = useStyles()
   const StyleTextField = styled(TextField)({
     input: {
@@ -55,6 +57,9 @@ export default function Password() {
     },
     marginTop: '20px',
   })
+  const handleSave = () => {
+    router.push('/signin')
+  }
 
   const createNewUser = async (data: ISignInForm, resetForm: Function) => {
     try {
@@ -247,6 +252,7 @@ export default function Password() {
                     fontSize: '18px',
                     textTransform: 'none',
                   }}
+                  onClick={handleSave}
                 >
                   Save
                 </Button>
